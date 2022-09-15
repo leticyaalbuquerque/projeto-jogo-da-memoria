@@ -4,75 +4,75 @@
 const baralho = [
   {
     nome: "abacate",
-    img: "/img/abacate.png",
+    img: "./img/abacate.png",
   },
   {
     nome: "abacaxi",
-    img: "/img/abacaxi.png",
+    img: "./img/abacaxi.png",
   },
   {
     nome: "banana",
-    img: "/img/banana.png",
+    img: "./img/banana.png",
   },
   {
     nome: "cereja",
-    img: "/img/cereja.png",
+    img: "./img/cereja.png",
   },
   {
     nome: "framboesa",
-    img: "/img/framboesa.png",
+    img: "./img/framboesa.png",
   },
   {
     nome: "kiwi",
-    img: "/img/kiwi.png",
+    img: "./img/kiwi.png",
   },
   {
     nome: "morango",
-    img: "/img/morango.png",
+    img: "./img/morango.png",
   },
   {
     nome: "limao",
-    img: "/img/limao.png",
+    img: "./img/limao.png",
   },
   {
     nome: "laranja",
-    img: "/img/laranja.png",
+    img: "./img/laranja.png",
   },
   {
     nome: "abacate",
-    img: "/img/abacate.png",
+    img: "./img/abacate.png",
   },
   {
     nome: "abacaxi",
-    img: "/img/abacaxi.png",
+    img: "./img/abacaxi.png",
   },
   {
     nome: "banana",
-    img: "/img/banana.png",
+    img: "./img/banana.png",
   },
   {
     nome: "cereja",
-    img: "/img/cereja.png",
+    img: "./img/cereja.png",
   },
   {
     nome: "framboesa",
-    img: "/img/framboesa.png",
+    img: "./img/framboesa.png",
   },
   {
     nome: "kiwi",
-    img: "/img/kiwi.png",
+    img: "./img/kiwi.png",
   },
   {
-    nome: "roma",
-    img: "/img/roma.png",
+    nome: "morango",
+    img: "./img/morango.png",
   },
   {
     nome: "limao",
-    img: "/img/limao.png",
+    img: "./img/limao.png",
   },
   {
     nome: "laranja",
-    img: "/img/laranja.png",
+    img: "./img/laranja.png",
   },
 ];
 
@@ -86,14 +86,12 @@ baralho.sort(() => {
   return 0.5 - Math.random();
 });
 
-console.log(baralho[0].nome);
-
 function criarGrade() {
   for (let i = 0; i < baralho.length; i++) {
     let carta = document.createElement("img");
     carta.id = i;
     carta.name = baralho[i].nome;
-    carta.src = "/img/verso.png";
+    carta.src = "./img/verso.png";
     carta.addEventListener("click", escolherCarta);
     grade.appendChild(carta);
     grade.classList.add("drop-shadow-md");
@@ -123,8 +121,8 @@ function escolherCarta() {
       setTimeout(() => {
         carta1.classList.remove("flip");
         carta2.classList.remove("flip");
-        carta1.src = "/img/verso.png";
-        carta2.src = "/img/verso.png";
+        carta1.src = "./img/verso.png";
+        carta2.src = "./img/verso.png";
       }, 1000);
     }
 
