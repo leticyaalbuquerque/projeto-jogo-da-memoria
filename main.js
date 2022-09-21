@@ -104,6 +104,7 @@ function escolherCarta() {
   escolhidas.push(carta);
 
   carta.classList.add("flip");
+  carta.removeEventListener("click", escolherCarta); 
 
   if (escolhidas.length === 2) {
     let carta1 = escolhidas[0];
@@ -113,7 +114,6 @@ function escolherCarta() {
       setTimeout(() => {
         carta1.classList.add("opacity-70");
         carta2.classList.add("opacity-70");
-        carta1.removeEventListener("click", escolherCarta);
         carta2.removeEventListener("click", escolherCarta);
       }, 300);
       ponto++;
@@ -123,6 +123,8 @@ function escolherCarta() {
         carta2.classList.remove("flip");
         carta1.src = "./img/verso.png";
         carta2.src = "./img/verso.png";
+        carta1.addEventListener("click", escolherCarta);
+        carta2.addEventListener("click", escolherCarta);
       }, 1000);
     }
 
